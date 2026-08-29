@@ -99,7 +99,7 @@ function renderCuratedProducts(container, products) {
   const featuredCard = createFeaturedProduct(featured);
   featuredSlot.append(featuredCard);
   window.registerReveal(featuredCard);
-  products.filter((product) => product !== featured).slice(0, 5).forEach((product, index) => {
+  products.filter((product) => product !== featured).slice(0, 6).forEach((product, index) => {
     const card = createProductCard(product, index);
     grid.append(card);
     window.registerReveal(card);
