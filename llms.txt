@@ -12,6 +12,7 @@
 - [홈](https://ienmom-website.vercel.app/): 브랜드 소개와 대표 제품
 - [내 소개](https://ienmom-website.vercel.app/about.html): 김정연 대표가 무색소 마카롱을 시작한 이야기
 - [제품](https://ienmom-website.vercel.app/products.html): 아이엔맘의 마카롱과 휘낭시에
+- [연락하기](https://ienmom-website.vercel.app/contact.html): 이메일, 인스타그램과 스마트스토어 연결
 - [이야기](https://ienmom-website.vercel.app/story/): 만드는 기준과 제품 안내 글
 
 ## 이야기(블로그)
