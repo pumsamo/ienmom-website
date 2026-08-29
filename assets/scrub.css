@@ -1,0 +1,90 @@
+.rd-scrub {
+  position: relative;
+  height: 400svh;
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.rd-scrub__sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.rd-scrub__video,
+.rd-scrub__scrim {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.rd-scrub__video {
+  object-fit: cover;
+  background: var(--ink);
+}
+
+.rd-scrub__scrim {
+  background: linear-gradient(90deg, rgb(28 26 23 / 82%) 0%, rgb(28 26 23 / 45%) 48%, rgb(28 26 23 / 18%) 100%);
+  pointer-events: none;
+}
+
+.rd-scrub__content {
+  position: absolute;
+  z-index: 2;
+  left: 8vw;
+  bottom: 13vh;
+  max-width: 48rem;
+}
+
+.rd-scrub__content > p:not(.kicker) {
+  max-width: 40ch;
+  margin: 2.2rem 0 0;
+  font-size: clamp(.95rem, 1.2vw, 1.1rem);
+}
+
+.rd-scrub__cue {
+  position: absolute;
+  z-index: 2;
+  right: 4vw;
+  bottom: 3rem;
+  margin: 0;
+  font-size: .55rem;
+  letter-spacing: .25em;
+  writing-mode: vertical-rl;
+}
+
+@media (max-width: 760px) {
+  .rd-scrub {
+    height: 350svh;
+  }
+
+  .rd-scrub__scrim {
+    background: linear-gradient(0deg, rgb(28 26 23 / 84%) 0%, rgb(28 26 23 / 18%) 78%);
+  }
+
+  .rd-scrub__content {
+    right: 1.25rem;
+    bottom: 12vh;
+    left: 1.25rem;
+  }
+
+  .rd-scrub__content > p:not(.kicker) {
+    font-size: .85rem;
+  }
+
+  .rd-scrub__cue {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rd-scrub {
+    height: 100svh;
+  }
+
+  .rd-scrub__video {
+    object-position: center;
+  }
+}
