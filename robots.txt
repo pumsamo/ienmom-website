@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /story/admin.html
 
-Sitemap: https://ienmom-website.vercel.app/sitemap.xml
+Sitemap: https://www.iandmomdessert.co.kr/sitemap.xml

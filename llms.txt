@@ -9,14 +9,14 @@
 
 ## 페이지 안내
 
-- [홈](https://ienmom-website.vercel.app/): 브랜드 소개와 대표 제품
-- [내 소개](https://ienmom-website.vercel.app/about.html): 김정연 대표가 무색소 마카롱을 시작한 이야기
-- [제품](https://ienmom-website.vercel.app/products.html): 아이엔맘의 마카롱과 휘낭시에
-- [연락하기](https://ienmom-website.vercel.app/contact.html): 이메일, 인스타그램과 스마트스토어 연결
-- [이야기](https://ienmom-website.vercel.app/story/): 만드는 기준과 제품 안내 글
+- [홈](https://www.iandmomdessert.co.kr/): 브랜드 소개와 대표 제품
+- [내 소개](https://www.iandmomdessert.co.kr/about.html): 김정연 대표가 무색소 마카롱을 시작한 이야기
+- [제품](https://www.iandmomdessert.co.kr/products.html): 아이엔맘의 마카롱과 휘낭시에
+- [연락하기](https://www.iandmomdessert.co.kr/contact.html): 이메일, 인스타그램과 스마트스토어 연결
+- [이야기](https://www.iandmomdessert.co.kr/story/): 만드는 기준과 제품 안내 글
 
 ## 이야기(블로그)
 
-- [마카롱에는 밀가루가 들어가나요?](https://ienmom-website.vercel.app/story/macaron-wheat-flour.html): 아이엔맘 꼬끄의 아몬드가루 100% 사용 기준과 완제품 알레르기 확인 방법
-- [무색소 마카롱과 일반 마카롱은 무엇이 다른가요?](https://ienmom-website.vercel.app/story/uncolored-vs-colored-macaron.html): 꼬끄에 착색용 재료를 더하는지 여부를 중심으로 설명한 차이
-- [마카롱 꼬끄에 색소를 넣지 않으면 무슨 색이 나오나요?](https://ienmom-website.vercel.app/story/uncolored-macaron-shell-color.html): 색소 없는 꼬끄의 아이보리·연한 베이지 색과 자연스러운 톤 차이
+- [마카롱에는 밀가루가 들어가나요?](https://www.iandmomdessert.co.kr/story/macaron-wheat-flour.html): 아이엔맘 꼬끄의 아몬드가루 100% 사용 기준과 완제품 알레르기 확인 방법
+- [무색소 마카롱과 일반 마카롱은 무엇이 다른가요?](https://www.iandmomdessert.co.kr/story/uncolored-vs-colored-macaron.html): 꼬끄에 착색용 재료를 더하는지 여부를 중심으로 설명한 차이
+- [마카롱 꼬끄에 색소를 넣지 않으면 무슨 색이 나오나요?](https://www.iandmomdessert.co.kr/story/uncolored-macaron-shell-color.html): 색소 없는 꼬끄의 아이보리·연한 베이지 색과 자연스러운 톤 차이

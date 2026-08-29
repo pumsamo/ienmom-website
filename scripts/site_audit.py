@@ -9,7 +9,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
-ORIGIN = "https://ienmom-website.vercel.app"
+ORIGIN = "https://www.iandmomdessert.co.kr"
 EXCLUDED = {Path("story/admin.html")}
 
 
