@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="아이엔맘의 무색소 수제마카롱과 수제휘낭시에 전체 제품을 만나보세요.">
+    <meta name="theme-color" content="#F6F1E7">
+    <title>제품 | 아이엔맘</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="products.js" defer></script>
+  </head>
+  <body class="products-page">
+    <a class="skip-link" href="#main">본문으로 바로가기</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="아이엔맘 홈"><span class="brand-name">아이엔맘</span><span class="brand-line">색소 없이, 마음을 담아</span></a>
+      <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+      <nav id="main-nav" class="main-nav" aria-label="주요 메뉴">
+        <a href="index.html">홈</a><a href="about.html">내 소개</a><a href="products.html" aria-current="page">제품</a><a href="index.html#contact">연락</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="catalog-hero" aria-labelledby="catalog-title">
+        <div class="reveal">
+          <p class="kicker terracotta">OUR DESSERTS</p>
+          <h1 id="catalog-title" class="two-line"><span>고르는 순간부터</span><em>다정한 선물이 됩니다.</em></h1>
+        </div>
+        <p class="reveal">무색소 수제마카롱과 휘낭시에,<br>함께 만드는 체험 키트까지 만나보세요.</p>
+      </section>
+      <section class="catalog" aria-label="전체 제품">
+        <div class="catalog-meta"><p>ALL PRODUCTS</p><p>가격은 스마트스토어 판매가 기준입니다.</p></div>
+        <div class="store-product-grid" data-product-grid aria-live="polite" aria-busy="true"></div>
+      </section>
+    </main>
+
+    <footer><div><strong>아이엔맘</strong><span>IENMOM</span></div><p>색소 없이, 마음을 담아 굽습니다.</p><p>© <span id="year"></span> IENMOM</p></footer>
+  </body>
+</html>

@@ -16,17 +16,19 @@ menuButton.addEventListener('click', () => {
 navigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const reveals = document.querySelectorAll('.reveal');
+let revealObserver;
 if (reduceMotion || !('IntersectionObserver' in window)) {
-  reveals.forEach((element) => element.classList.add('is-visible'));
+  window.registerReveal = (element) => element.classList.add('is-visible');
 } else {
-  const observer = new IntersectionObserver((entries) => {
+  revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
+        revealObserver.unobserve(entry.target);
       }
     });
   }, { threshold: 0.16 });
-  reveals.forEach((element) => observer.observe(element));
+  window.registerReveal = (element) => revealObserver.observe(element);
 }
+reveals.forEach((element) => window.registerReveal(element));
 document.querySelector('#year').textContent = new Date().getFullYear();

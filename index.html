@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <script src="products.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">본문으로 바로가기</a>
@@ -21,7 +22,7 @@
       </a>
       <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
       <nav id="main-nav" class="main-nav" aria-label="주요 메뉴">
-        <a href="#home">홈</a><a href="about.html">내 소개</a><a href="#products">제품</a><a href="#contact">연락</a>
+        <a href="#home">홈</a><a href="about.html">내 소개</a><a href="products.html">제품</a><a href="#contact">연락</a>
       </nav>
     </header>
     <main id="main">
@@ -52,14 +53,10 @@
           <div class="reveal"><p class="kicker terracotta">02 · OUR DESSERTS</p><h2 id="products-title" class="two-line"><span>오늘의 다정함을</span><span>한 상자에 담았습니다.</span></h2></div>
           <p class="reveal">계절과 재료에 따라 조금씩 달라지는<br>두 가지 수제 디저트를 소개합니다.</p>
         </div>
-        <article class="product-feature macaron-feature">
-          <div class="feature-media" role="img" aria-label="다양한 필링을 담은 무색소 수제마카롱 세트"></div><div class="scrim"></div>
-          <div class="feature-copy reveal"><p class="kicker">MACARON GIFT SET</p><h3>무색소 수제마카롱</h3><p>고운 꼬끄 사이로 재료마다 다른<br>풍미와 식감을 풍성하게 채웠습니다.</p><span>세트 구성 및 가격 · 문의</span></div>
-        </article>
-        <article class="product-feature financier-feature">
-          <div class="feature-media" role="img" aria-label="다양한 토핑을 올린 수제휘낭시에 선물세트"></div><div class="scrim"></div>
-          <div class="feature-copy reveal"><p class="kicker">FINANCIER GIFT SET</p><h3>수제휘낭시에</h3><p>갈색 버터의 깊은 향과 촉촉한 속결,<br>각기 다른 토핑의 즐거움을 담았습니다.</p><span>세트 구성 및 가격 · 문의</span></div>
-        </article>
+        <div class="home-products">
+          <div class="store-product-grid store-product-grid-home" data-product-grid data-limit="3" aria-live="polite" aria-busy="true"></div>
+          <a class="all-products-link" href="products.html">모든 제품 보기 <span aria-hidden="true">→</span></a>
+        </div>
       </section>
       <section id="contact" class="contact scene" aria-labelledby="contact-title">
         <div class="contact-heading reveal"><p class="kicker terracotta">03 · CONTACT</p><h2 id="contact-title" class="two-line"><span>달콤한 순간을</span><span>함께 준비할까요?</span></h2></div>
