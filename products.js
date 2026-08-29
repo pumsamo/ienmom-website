@@ -24,7 +24,12 @@ function createProductCard(product, index) {
   const name = document.createElement('h3');
   name.textContent = product.name;
 
+  const tagline = document.createElement('p');
+  tagline.className = 'product-tagline';
+  tagline.textContent = product.tagline || '';
+
   const price = document.createElement('p');
+  price.className = 'product-price';
   price.textContent = `${formatPrice.format(product.price)}원`;
 
   const buy = document.createElement('a');
@@ -35,14 +40,72 @@ function createProductCard(product, index) {
   buy.textContent = '구매하기 ↗';
   buy.setAttribute('aria-label', `${product.name} 구매하기`);
 
-  info.append(name, price, buy);
+  info.append(name, tagline, price, buy);
   article.append(imageLink, info);
   return article;
 }
 
+function createFeaturedProduct(product) {
+  const article = document.createElement('article');
+  article.className = 'curated-feature reveal';
+
+  const imageLink = document.createElement('a');
+  imageLink.className = 'curated-feature-image';
+  imageLink.href = product.url;
+  imageLink.target = '_blank';
+  imageLink.rel = 'noreferrer';
+  imageLink.setAttribute('aria-label', `${product.name} 구매 페이지 열기`);
+  const image = document.createElement('img');
+  image.src = product.image;
+  image.alt = product.name;
+  image.decoding = 'async';
+  imageLink.append(image);
+
+  const copy = document.createElement('div');
+  copy.className = 'curated-feature-copy';
+  const label = document.createElement('p');
+  label.className = 'kicker terracotta';
+  label.textContent = 'SIGNATURE GIFT';
+  const name = document.createElement('h3');
+  name.textContent = product.name;
+  const tagline = document.createElement('p');
+  tagline.className = 'curated-feature-tagline';
+  tagline.textContent = product.tagline || '';
+  const price = document.createElement('p');
+  price.className = 'curated-feature-price';
+  price.textContent = `${formatPrice.format(product.price)}원`;
+  const buy = document.createElement('a');
+  buy.className = 'buy-button';
+  buy.href = product.url;
+  buy.target = '_blank';
+  buy.rel = 'noreferrer';
+  buy.textContent = '구매하기 ↗';
+  buy.setAttribute('aria-label', `${product.name} 구매하기`);
+  copy.append(label, name, tagline, price, buy);
+  article.append(imageLink, copy);
+  return article;
+}
+
+function renderCuratedProducts(container, products) {
+  const featured = products.find((product) => product.name.includes('10구 랜덤 선물세트'));
+  if (!featured) throw new Error('대표 제품을 찾지 못했습니다.');
+  const featuredSlot = container.querySelector('[data-featured-product]');
+  const grid = container.querySelector('[data-curated-grid]');
+  const featuredCard = createFeaturedProduct(featured);
+  featuredSlot.append(featuredCard);
+  window.registerReveal(featuredCard);
+  products.filter((product) => product !== featured).slice(0, 5).forEach((product, index) => {
+    const card = createProductCard(product, index);
+    grid.append(card);
+    window.registerReveal(card);
+  });
+  container.removeAttribute('aria-busy');
+}
+
 async function loadProducts() {
   const grids = document.querySelectorAll('[data-product-grid]');
-  if (!grids.length) return;
+  const curated = document.querySelector('[data-curated-products]');
+  if (!grids.length && !curated) return;
 
   try {
     const response = await fetch('products.json');
@@ -56,11 +119,16 @@ async function loadProducts() {
 
       grid.querySelectorAll('.reveal').forEach((card) => window.registerReveal(card));
     });
+    if (curated) renderCuratedProducts(curated, products);
   } catch (error) {
     grids.forEach((grid) => {
       grid.innerHTML = '<p class="product-error">제품 정보를 불러오지 못했습니다. 잠시 후 다시 확인해 주세요.</p>';
       grid.removeAttribute('aria-busy');
     });
+    if (curated) {
+      curated.innerHTML = '<p class="product-error">제품 정보를 불러오지 못했습니다. 잠시 후 다시 확인해 주세요.</p>';
+      curated.removeAttribute('aria-busy');
+    }
   }
 }
 

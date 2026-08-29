@@ -1,90 +1,105 @@
 [
   {
     "name": "아이엔맘 수제 휘낭시에 8종",
+    "tagline": "오늘의 간식으로 하나씩 골라 먹고 싶은 날",
     "price": 2000,
     "image": "https://shop-phinf.pstatic.net/20260622_282/17820889552674BHQs_PNG/129937653133888050_1866639019.png",
     "url": "https://smartstore.naver.com/iandmomriceflower/products/6436577978"
   },
   {
     "name": "아이엔맘 수제 휘낭시에 8종 선물세트",
+    "tagline": "여럿이 함께 나눌 정갈한 선물이 필요한 날",
     "price": 21000,
     "image": "https://shop-phinf.pstatic.net/20260706_64/1783325623561uYwtR_PNG/128235628299359291_1654974325.png",
     "url": "https://smartstore.naver.com/iandmomriceflower/products/9888226891"
   },
   {
     "name": "아이엔맘 무색소 수제 마카롱 황치즈 마카롱",
+    "tagline": "진한 치즈 풍미로 기분 전환하고 싶은 날",
     "price": 1500,
     "image": "https://shop-phinf.pstatic.net/20260624_67/1782289534919hDwtx_PNG/21385353839094136_1093525339.png",
     "url": "https://smartstore.naver.com/iandmomriceflower/products/9883564230"
   },
   {
     "name": "아이엔맘 무색소 수제 포토마카롱 3구",
+    "tagline": "사진과 마음을 함께 전하고 싶은 특별한 날",
     "price": 14000,
     "image": "https://shop-phinf.pstatic.net/20240818_146/17239837289254Y5pt_JPEG/38315393024067764_1027186705.JPG",
     "url": "https://smartstore.naver.com/iandmomriceflower/products/5606073095"
   },
   {
     "name": "아이엔맘 무색소 수제 마카롱 바닐라 마카롱",
+    "tagline": "부드럽고 익숙한 달콤함이 생각나는 날",
     "price": 1500,
     "image": "https://shop-phinf.pstatic.net/20260624_234/1782290183019zkdMk_PNG/15113793950817316_354714043.png",
     "url": "https://smartstore.naver.com/iandmomriceflower/products/9818173927"
   },
   {
     "name": "아이엔맘 무색소 수제 마카롱 코코아 마카롱",
+    "tagline": "깊은 코코아 향이 필요한 오후",
     "price": 1500,
     "image": "https://shop-phinf.pstatic.net/20240124_109/1706093124168uyo7x_JPEG/107228959000554289_1384495078.jpg",
     "url": "https://smartstore.naver.com/iandmomriceflower/products/9883546652"
   },
   {
     "name": "아이엔맘 무색소 수제 마카롱 10구 랜덤 선물세트",
+    "tagline": "고마운 마음을 넉넉히 전하고 싶은 날",
     "price": 17000,
     "image": "https://shop-phinf.pstatic.net/20260624_229/1782289251777PKpPb_PNG/59811928623583916_1453282095.png",
     "url": "https://smartstore.naver.com/iandmomriceflower/products/6009773424"
   },
   {
     "name": "아이엔맘 무색소 수제 꼬끄후레이크",
+    "tagline": "바삭한 꼬끄를 가볍게 즐기고 싶은 순간",
     "price": 5000,
     "image": "https://shop-phinf.pstatic.net/20250721_259/1753094526097VSoKD_PNG/100928276814083249_1364677476.PNG",
     "url": "https://smartstore.naver.com/iandmomriceflower/products/12137098381"
   },
   {
     "name": "아이엔맘 무색소 수제 마카롱 5구 랜덤 선물세트",
+    "tagline": "부담 없이 다정한 선물을 건네고 싶은 날",
     "price": 9500,
     "image": "https://shop-phinf.pstatic.net/20260727_219/1785113767066SpfM7_PNG/119246599150809852_681305666.png",
     "url": "https://smartstore.naver.com/iandmomriceflower/products/10693435751"
   },
   {
     "name": "준비물 없이 바로 체험하는 1인 1키트 마카롱 만들기 키트 12구",
+    "tagline": "준비 없이도 함께 만드는 즐거움이 필요한 날",
     "price": 22900,
     "image": "https://shop-phinf.pstatic.net/20260305_179/1772700698949T4V2I_PNG/48318731385131547_677265812.png",
     "url": "https://smartstore.naver.com/iandmomriceflower/products/13616400685"
   },
   {
     "name": "메시지 마카롱 만들기 1인 1키트 6구",
+    "tagline": "짧은 메시지를 달콤하게 전하고 싶은 날",
     "price": 18900,
     "image": "https://shop-phinf.pstatic.net/20260601_119/17803021829971qHAm_PNG/14950918681140431_1725113483.png",
     "url": "https://smartstore.naver.com/iandmomriceflower/products/12290456489"
   },
   {
     "name": "아이엔맘 무색소 수제 마카롱 3구 랜덤 선물세트",
+    "tagline": "작은 마음을 알차게 건네고 싶은 순간",
     "price": 6500,
     "image": "https://shop-phinf.pstatic.net/20260624_267/1782289037283tBna5_PNG/36947796234748438_2053383069.png",
     "url": "https://smartstore.naver.com/iandmomriceflower/products/10693398303"
   },
   {
     "name": "아이엔맘 무색소 수제 포토마카롱 1구 (10개부터 주문 가능)",
+    "tagline": "특별한 한마디를 여러 사람에게 전하는 날",
     "price": 3500,
     "image": "https://shop-phinf.pstatic.net/20260624_33/1782290018801XSpAw_PNG/53059260848947310_187185733.png",
     "url": "https://smartstore.naver.com/iandmomriceflower/products/10761247804"
   },
   {
     "name": "아이엔맘 무색소 수제 포토마카롱 6구",
+    "tagline": "사진으로 오래 기억할 선물이 필요한 날",
     "price": 24000,
     "image": "https://shop-phinf.pstatic.net/20240818_106/1723984558619s1AQ8_JPEG/18372315588128862_1909395029.JPG",
     "url": "https://smartstore.naver.com/iandmomriceflower/products/10756725575"
   },
   {
     "name": "아이엔맘 무색소 수제 마카롱 말차 마카롱",
+    "tagline": "쌉싸름한 말차의 여운이 생각나는 오후",
     "price": 1500,
     "image": "https://shop-phinf.pstatic.net/20240124_24/17060934127176mv4f_JPEG/107229247546949611_390854765.jpg",
     "url": "https://smartstore.naver.com/iandmomriceflower/products/9883512791"
