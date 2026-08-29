@@ -37,8 +37,12 @@ function createProductCard(product, index) {
   buy.href = product.url;
   buy.target = '_blank';
   buy.rel = 'noreferrer';
-  buy.textContent = '구매하기 ↗';
-  buy.setAttribute('aria-label', `${product.name} 구매하기`);
+  buy.textContent = '장바구니 담기';
+  buy.setAttribute('aria-label', `${product.name} 장바구니에 담기`);
+  buy.setAttribute('data-cart-add', '');
+  buy.dataset.name = product.name;
+  buy.dataset.price = String(product.price);
+  buy.dataset.url = product.url;
 
   info.append(name, tagline, price, buy);
   article.append(imageLink, info);
@@ -84,8 +88,12 @@ function createFeaturedProduct(product) {
   buy.href = product.url;
   buy.target = '_blank';
   buy.rel = 'noreferrer';
-  buy.textContent = '구매하기 ↗';
-  buy.setAttribute('aria-label', `${product.name} 구매하기`);
+  buy.textContent = '장바구니 담기';
+  buy.setAttribute('aria-label', `${product.name} 장바구니에 담기`);
+  buy.setAttribute('data-cart-add', '');
+  buy.dataset.name = product.name;
+  buy.dataset.price = String(product.price);
+  buy.dataset.url = product.url;
   copy.append(label, name, tagline, price, buy);
   article.append(imageLink, copy);
   return article;
