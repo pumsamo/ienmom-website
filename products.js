@@ -67,7 +67,12 @@ function createFeaturedProduct(product) {
   label.className = 'kicker terracotta';
   label.textContent = 'SIGNATURE GIFT';
   const name = document.createElement('h3');
-  name.textContent = product.name;
+  name.className = 'curated-feature-title';
+  ['아이엔맘', '무색소 수제 마카롱', '10구 선물세트'].forEach((line) => {
+    const span = document.createElement('span');
+    span.textContent = line;
+    name.append(span);
+  });
   const tagline = document.createElement('p');
   tagline.className = 'curated-feature-tagline';
   tagline.textContent = product.tagline || '';
@@ -87,7 +92,7 @@ function createFeaturedProduct(product) {
 }
 
 function renderCuratedProducts(container, products) {
-  const featured = products.find((product) => product.name.includes('10구 랜덤 선물세트'));
+  const featured = products.find((product) => product.name.includes('10구 선물세트'));
   if (!featured) throw new Error('대표 제품을 찾지 못했습니다.');
   const featuredSlot = container.querySelector('[data-featured-product]');
   const grid = container.querySelector('[data-curated-grid]');
