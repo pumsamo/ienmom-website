@@ -9,6 +9,7 @@
 ## 파일 구성
 
 - `index.html` — 사이트 콘텐츠와 구조
+- `about.html` — 인터뷰를 바탕으로 쓴 1인칭 브랜드 소개
 - `styles.css` — 반응형 디자인
 - `script.js` — 모바일 메뉴와 절제된 스크롤 리빌
 - `assets/ienmom-macaron-set.png` — 아이엔맘 마카롱 세트 이미지
