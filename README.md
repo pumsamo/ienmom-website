@@ -13,6 +13,11 @@
 - `products.html` — `products.json`을 읽어 전체 제품을 표시하는 제품 페이지
 - `products.json` — 제품명, 가격, 이미지 주소, 스마트스토어 구매 링크
 - `products.js` — 홈 대표 제품과 전체 제품 목록 렌더링
+- `story/posts.json` — 블로그 글 데이터
+- `story/index.html` — 이야기 목록
+- `story/post.html` — 이야기 상세
+- `story/admin.html` — 원본 블로그 관리 도구
+- `home-stories.js` — 홈에 최신 이야기 최대 3개 표시
 - `styles.css` — 반응형 디자인
 - `script.js` — 모바일 메뉴와 절제된 스크롤 리빌
 - `assets/ienmom-macaron-set.png` — 아이엔맘 마카롱 세트 이미지

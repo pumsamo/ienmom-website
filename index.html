@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <script src="products.js" defer></script>
+    <script src="home-stories.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">본문으로 바로가기</a>
@@ -22,7 +23,7 @@
       </a>
       <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
       <nav id="main-nav" class="main-nav" aria-label="주요 메뉴">
-        <a href="#home">홈</a><a href="about.html">내 소개</a><a href="products.html">제품</a><a href="#contact">연락</a>
+        <a href="#home">홈</a><a href="about.html">내 소개</a><a href="products.html">제품</a><a href="story/">이야기</a><a href="#contact">연락</a>
       </nav>
     </header>
     <main id="main">
@@ -58,8 +59,16 @@
           <a class="all-products-link" href="products.html">모든 제품 보기 <span aria-hidden="true">→</span></a>
         </div>
       </section>
+      <section class="home-stories scene" aria-labelledby="home-stories-title">
+        <div class="home-stories-heading reveal">
+          <p class="kicker terracotta">03 · STORY</p>
+          <h2 id="home-stories-title" class="two-line"><span>만드는 마음을</span><span>천천히 기록합니다.</span></h2>
+        </div>
+        <div class="home-story-grid" data-home-stories aria-live="polite" aria-busy="true"></div>
+        <a class="all-stories-link reveal" href="story/">이야기 더 보기 <span aria-hidden="true">→</span></a>
+      </section>
       <section id="contact" class="contact scene" aria-labelledby="contact-title">
-        <div class="contact-heading reveal"><p class="kicker terracotta">03 · CONTACT</p><h2 id="contact-title" class="two-line"><span>달콤한 순간을</span><span>함께 준비할까요?</span></h2></div>
+        <div class="contact-heading reveal"><p class="kicker terracotta">04 · CONTACT</p><h2 id="contact-title" class="two-line"><span>달콤한 순간을</span><span>함께 준비할까요?</span></h2></div>
         <div class="contact-copy reveal">
           <p>답례품, 선물 세트, 단체 주문은<br>편하게 문의해 주세요.</p>
           <div class="contact-links"><a href="mailto:hello@ienmom.example"><span>이메일</span>hello@ienmom.example</a><a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><span>인스타그램</span>@ienmom_dessert</a><p><span>픽업</span>서울시 ○○구 · 주문 확정 후 안내</p></div>
