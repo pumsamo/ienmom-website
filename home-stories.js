@@ -13,6 +13,7 @@ async function loadHomeStories() {
     if (!response.ok) throw new Error('이야기를 불러오지 못했습니다.');
     const posts = await response.json();
     posts
+      .filter((post) => !post.draft)
       .slice()
       .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
       .slice(0, 3)

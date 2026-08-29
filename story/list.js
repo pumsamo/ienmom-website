@@ -8,12 +8,13 @@
   }
 
   function render(posts) {
-    if (!Array.isArray(posts) || !posts.length) {
+    const published = Array.isArray(posts) ? posts.filter((post) => !post.draft) : [];
+    if (!published.length) {
       list.innerHTML = '<li class="story-empty">아직 올라온 글이 없습니다.</li>';
       return;
     }
 
-    posts.slice().sort((a, b) => String(b.date || '').localeCompare(String(a.date || ''))).forEach((post) => {
+    published.slice().sort((a, b) => String(b.date || '').localeCompare(String(a.date || ''))).forEach((post) => {
       const item = document.createElement('li');
       item.className = 'story-card reveal';
       const link = document.createElement('a');

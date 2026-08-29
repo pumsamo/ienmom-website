@@ -1,5 +1,33 @@
 const formatPrice = new Intl.NumberFormat('ko-KR');
 
+function setProductStructuredData(products) {
+  if (!document.body.classList.contains('products-page')) return;
+  const structured = document.createElement('script');
+  structured.type = 'application/ld+json';
+  structured.id = 'product-structured-data';
+  structured.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: products.map((product, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Product',
+        name: product.name,
+        image: product.image,
+        url: product.url,
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'KRW',
+          price: product.price,
+          url: product.url
+        }
+      }
+    }))
+  });
+  document.head.append(structured);
+}
+
 function createProductCard(product, index) {
   const article = document.createElement('article');
   article.className = 'store-product reveal';
@@ -124,6 +152,7 @@ async function loadProducts() {
     const response = await fetch('products.json');
     if (!response.ok) throw new Error('제품 정보를 불러오지 못했습니다.');
     const products = await response.json();
+    setProductStructuredData(products);
 
     grids.forEach((grid) => {
       const limit = Number(grid.dataset.limit) || products.length;

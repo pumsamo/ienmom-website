@@ -62,6 +62,34 @@
       author: post.author ? { '@type': 'Person', name: post.author } : undefined
     });
     document.head.append(structured);
+
+    if (Array.isArray(post.faq) && post.faq.length) {
+      const faqStructured = document.createElement('script');
+      faqStructured.type = 'application/ld+json';
+      faqStructured.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: post.faq.map((item) => ({
+          '@type': 'Question',
+          name: item.q,
+          acceptedAnswer: { '@type': 'Answer', text: item.a }
+        }))
+      });
+      document.head.append(faqStructured);
+    }
+
+    const breadcrumb = document.createElement('script');
+    breadcrumb.type = 'application/ld+json';
+    breadcrumb.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: `${location.origin}/` },
+        { '@type': 'ListItem', position: 2, name: '이야기', item: `${location.origin}/story/` },
+        { '@type': 'ListItem', position: 3, name: title, item: canonical }
+      ]
+    });
+    document.head.append(breadcrumb);
   }
 
   function renderFaq(items) {
@@ -85,7 +113,7 @@
         const link = el('a', null, item.title || item.url);
         link.href = item.url;
         link.target = '_blank';
-        link.rel = 'noreferrer';
+        link.rel = 'noopener noreferrer';
         row.append(link);
       } else row.textContent = item.title || '';
       list.append(row);
@@ -95,6 +123,7 @@
   }
 
   function notFound() {
+    main.replaceChildren();
     const box = el('div', 'post-notfound');
     box.append(el('h1', null, '글을 찾을 수 없습니다'), el('p', null, '주소가 잘못되었거나 삭제된 글일 수 있어요.'));
     const link = el('a', null, '이야기 목록으로 돌아가기');
@@ -104,9 +133,11 @@
   }
 
   function render(posts) {
+    posts = posts.filter((post) => !post.draft);
     const id = new URLSearchParams(location.search).get('id') || '';
     const post = posts.find((item) => String(item.id) === id);
     if (!post) { notFound(); return; }
+    main.replaceChildren();
     setMeta(post);
 
     const article = el('article', 'story-article reveal');
