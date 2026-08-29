@@ -10,9 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="assets/scrub.css">
     <script src="script.js" defer></script>
-    <script src="assets/scrub.js" defer></script>
     <script src="products.js" defer></script>
     <script src="home-stories.js" defer></script>
     <link rel="stylesheet" href="assets/cart.css">
@@ -30,22 +28,23 @@
       </nav>
     </header>
     <main id="main">
-      <section id="home" class="rd-scrub" aria-labelledby="hero-title">
-        <div class="rd-scrub__sticky">
-          <video class="rd-scrub__video" muted playsinline preload="auto" aria-hidden="true"
-            src="assets/hero-scrub.mp4" poster="assets/hero-poster.jpg"
-            data-desktop-src="assets/hero-scrub.mp4" data-mobile-src="assets/hero-scrub-m.mp4"
-            data-desktop-poster="assets/hero-poster.jpg" data-mobile-poster="assets/hero-poster-m.jpg"></video>
-          <div class="rd-scrub__scrim"></div>
-          <div class="rd-scrub__content">
-            <p class="kicker">HANDMADE DESSERT · SEOUL</p>
-            <h1 id="hero-title" class="two-line"><span>색은 담백하게,</span><em>마음은 다정하게.</em></h1>
-            <p>좋은 재료의 빛깔을 그대로 살려<br>매일 작은 행복을 굽습니다.</p>
-            <a class="line-link" href="#story">아이엔맘 이야기 <span aria-hidden="true">↘</span></a>
-          </div>
-          <p class="rd-scrub__cue" aria-hidden="true">SCROLL</p>
+      <section id="home" class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" role="img" aria-label="아이엔맘 무색소 수제마카롱 선물세트"></div>
+        <div class="scrim"></div>
+        <div class="hero-content">
+          <p class="kicker">HANDMADE DESSERT · IENMOM</p>
+          <h1 id="hero-title" class="two-line"><span>색은 담백하게,</span><em>마음은 다정하게.</em></h1>
+          <p>좋은 재료의 빛깔을 그대로 살려<br>매일 작은 행복을 굽습니다.</p>
+          <a class="line-link" href="#story">아이엔맘 이야기 <span aria-hidden="true">↘</span></a>
         </div>
+        <p class="scroll-cue" aria-hidden="true">SCROLL</p>
       </section>
+      <div class="keyword-marquee" role="region" aria-label="아이엔맘 핵심 가치">
+        <div class="keyword-track">
+          <div class="keyword-group"><span>무색소 수제마카롱</span><i>·</i><span>아몬드가루 100%</span><i>·</i><span>마음을 담은 선물</span><i>·</i><span>수제 휘낭시에</span><i>·</i></div>
+          <div class="keyword-group" aria-hidden="true"><span>무색소 수제마카롱</span><i>·</i><span>아몬드가루 100%</span><i>·</i><span>마음을 담은 선물</span><i>·</i><span>수제 휘낭시에</span><i>·</i></div>
+        </div>
+      </div>
       <section id="story" class="story scene" aria-labelledby="story-title">
         <div class="story-copy reveal">
           <p class="kicker terracotta">01 · OUR STORY</p>

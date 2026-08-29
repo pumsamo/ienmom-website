@@ -59,3 +59,21 @@ h2.two-line{font-size:clamp(2.5rem,4vw,4.8rem)}
 /* Contact page and footer contact links */
 footer .footer-center{align-items:center;gap:.8rem;text-align:center}.footer-links{display:flex;flex-direction:row;gap:1.2rem}.footer-links a{padding-bottom:.15rem;border-bottom:1px solid currentColor;font-size:.62rem;letter-spacing:.08em}.footer-copy{text-align:right}.contact-page .site-header{color:var(--ink)}.contact-page .main-nav a[aria-current="page"]{color:var(--terra)}.contact-main{min-height:100svh}.contact-page-hero{min-height:100svh;display:grid;grid-template-columns:.9fr 1.1fr;gap:9vw;align-items:center;padding:16vh max(5vw,calc((100vw - 82rem)/2)) 12vh}.contact-page-heading h1{font-size:clamp(3.2rem,5.7vw,6.4rem);line-height:1.14}.contact-page-heading>p:last-child{max-width:40ch;margin:2rem 0 0;font-size:.9rem}.contact-action-list{border-top:1px solid var(--ink)}.contact-action-list a{display:flex;min-height:10.5rem;flex-direction:column;justify-content:space-between;padding:1.5rem;border-bottom:1px solid var(--ink);transition:background-color .25s ease,color .25s ease}.contact-action-list a:hover,.contact-action-list a:focus-visible{background:var(--ink);color:var(--cream)}.contact-action-list span{color:var(--terra);font-size:.62rem;font-weight:600;letter-spacing:.18em}.contact-action-list strong{font:400 clamp(1.35rem,2.3vw,2.5rem)/1.35 var(--serif);letter-spacing:-.04em}
 @media(max-width:760px){footer .footer-center{align-items:flex-start;text-align:left}.footer-links{margin-top:.25rem}.footer-copy{text-align:left}.contact-page-hero{grid-template-columns:1fr;gap:10vh;padding:18vh 1.25rem 15vh}.contact-page-heading h1{font-size:clamp(2.7rem,12vw,3.4rem)}.contact-action-list a{min-height:9rem;padding:1.25rem 0}.contact-action-list strong{font-size:1.45rem}}
+
+/* Brand system refresh */
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:var(--terra);color:var(--cream)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--terra);outline-offset:4px}
+.site-header{padding:2.2rem 4vw}.main-nav a{position:relative;padding:.35rem 0}.main-nav a[aria-current="page"]::after{content:"";position:absolute;right:0;bottom:0;left:0;height:1px;background:currentColor}
+.hero-media{inset:-4%;background-position:58% center;animation:hero-zoom 22s ease-out both}.scrim{background:linear-gradient(90deg,rgb(28 26 23 / 84%) 0%,rgb(28 26 23 / 48%) 50%,rgb(28 26 23 / 18%) 100%)}
+.hero-content{bottom:12vh}.hero-content h1{max-width:10ch;text-wrap:balance}.hero-content>p:not(.kicker){line-height:1.9}.line-link{min-width:16rem;justify-content:space-between}
+.keyword-marquee{overflow:hidden;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);background:var(--cream);color:var(--ink)}
+.keyword-track{display:flex;width:max-content;animation:keyword-marquee 32s linear infinite}.keyword-group{display:flex;align-items:center;flex:none;gap:2.4rem;padding:1.35rem 1.2rem}.keyword-group span{font:400 clamp(1rem,1.6vw,1.45rem)/1 var(--serif);white-space:nowrap}.keyword-group i{color:var(--terra);font-style:normal}
+@keyframes keyword-marquee{to{transform:translateX(-50%)}}
+.scene{padding-top:max(15vh,7rem);padding-bottom:max(15vh,7rem)}
+.reveal{opacity:1;transform:none;transition:none}
+.founder-photo img{height:72vh;min-height:34rem;object-fit:cover;object-position:55% center}
+.store-product-image img{transition:none}.store-product-info{padding-top:1.5rem}.buy-button{min-height:3.2rem}.catalog,.home-products{padding-bottom:max(15vh,7rem)}
+footer{min-height:46vh;padding-top:10vh;border-top:1px solid var(--cream)}
+@media(max-width:760px){.site-header{padding:1.35rem 1.25rem}.hero-media{background-position:63% center}.scrim{background:linear-gradient(0deg,rgb(28 26 23 / 88%) 0%,rgb(28 26 23 / 22%) 76%)}.hero-content{bottom:11vh}.hero-content h1{max-width:none}.line-link{min-width:min(16rem,100%)}.keyword-track{animation-duration:25s}.keyword-group{gap:1.5rem;padding:1.1rem .75rem}.founder-photo img{height:66vh;min-height:28rem}.scene{padding-top:15vh;padding-bottom:15vh}footer{min-height:52vh}}
+@media(prefers-reduced-motion:reduce){.hero-media,.keyword-track{animation:none!important}.keyword-track{transform:none}.keyword-group[aria-hidden="true"]{display:none}}

@@ -14,21 +14,7 @@ menuButton.addEventListener('click', () => {
   menuButton.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
 });
 navigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const reveals = document.querySelectorAll('.reveal');
-let revealObserver;
-if (reduceMotion || !('IntersectionObserver' in window)) {
-  window.registerReveal = (element) => element.classList.add('is-visible');
-} else {
-  revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.16 });
-  window.registerReveal = (element) => revealObserver.observe(element);
-}
+window.registerReveal = (element) => element.classList.add('is-visible');
 reveals.forEach((element) => window.registerReveal(element));
 document.querySelector('#year').textContent = new Date().getFullYear();
